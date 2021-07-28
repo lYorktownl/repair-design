@@ -81,34 +81,33 @@ header, footer{
 
                           /* Второй блок */
 
-.block2{
+    .block2{
     background: linear-gradient( rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7) ), no-repeat url("images/image1.jpg");
     background-size: cover;
-    position: relative ;
-}
-.b2-content{
+    background-position: center center;
+                        }
+.block2-content{
     display: inline-block;
     margin: 194px 0 208px 134px;
 }
-.text1{
+.block2-text1{
     margin-bottom: 19px;
     font-family: "Yeseva-One";
     font-size: 40px;
     line-height: 53px;
     text-transform: uppercase;
     color: #FFFFFF;
-    background: none;
 }
 .block2-text1-title{
     color: #E3B873;
-}
-.text2{
-    margin-bottom: 41px;
+                        }
+.block2-text2{
+     margin-bottom: 41px;
     font-size: 22px;
     line-height: 36px;
     color: #FFFFFF;
 }
-.block2-button{
+.block2-button1, .block2-button2{
     padding: 20px 22px;
     font-style: italic;
     font-size: 11px;
@@ -116,17 +115,18 @@ header, footer{
     text-align: center;
     color: #FFFFFF;
     background: none;
-    border-color: #E3B873;
+    border: 0;
     box-shadow: 0px 5px 15px rgba(227, 184, 115, 0.3);
     border-radius: 2px;
     cursor: pointer;
 }
-.button1{
+.block2-button1{
     margin-right: 20px;
 }
-.block2-button:hover{
+.block2-button1:hover, .block2-button2:hover{
     background: #E3B873;;
 }
+
 
                         /* Третий блок */
 
@@ -283,15 +283,13 @@ header, footer{
     border: none;
 }
 
-                                /* Четвертый блок */
-
-.online_control{
+.block4{
     margin: -324px auto 0;
     text-align: center;
     padding: 0 18px;
 }
-
-.control-title{
+/* Заголовок */
+.block4-title{
     font-family: "Yeseva-One";
     font-weight: normal;
     font-size: 20px;
@@ -300,21 +298,21 @@ header, footer{
     text-transform: uppercase;
     color: #FFFFFF;
 }
-
-.vector-camera{
+/* вектор */
+.block4-vector{
     display: flex;
     height: 28px;
     justify-content: center;
 }
-.cam-line{
+.block4-vector-line{
     width: 32px;
     height: 1.54px;
     margin: 12.46px 9.47px 0 9.47px;
     background: #E3B873;
     border-radius: 30px;
 }
-
-.video{
+/* видео */
+.block4-video{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -324,11 +322,11 @@ header, footer{
     position: relative;
     background: rgba(0, 0, 0);
 }
-.video-image{
+.block4-video-image{
     width: 100%;
     opacity: 0.2;
 }
-.video-play{
+.block4-video-play{
     position: absolute;
     width: 18%;
     height: auto;
@@ -336,22 +334,21 @@ header, footer{
     border: none;
     cursor: pointer;
 }
-.video-play-image{
+.block4-video-play-image{
     width: 100%;
     height: auto;
 }
-
-.center-line{
-    display: flex;
-    align-items: center;
+/* линия */
+.block4-line{
+    display: block;
     width: 55px;
     height: 1.54px;
     margin: 62.5px auto 34.46px;
     background: #E3B873;
     border-radius: 30px;
 }
-
-.control-text{
+/* текст */
+.block4-text{
     width: 681px;
     height: 130.91px;
     margin: auto;
@@ -362,8 +359,8 @@ header, footer{
     text-align: center;
     color: #363636;
 }
-
-.control-confirm{
+/* Инпуты */
+.block4-confirm{
     display: inline-flex;
     justify-content: space-between;
     align-items: flex-end;
@@ -371,7 +368,7 @@ header, footer{
     height: 51px;
     margin: 91.5px 0 33px 0;
 }
-.control-input{
+.block4-input{
     border: none;
     background: none;
     border-bottom: 1px solid rgba(54, 54, 54, 0.3);
@@ -379,20 +376,21 @@ header, footer{
     font-size: 14px;
     line-height: 23px;
 }
-.control-input:focus{
-    outline: none;    
-    border-bottom: 1px solid rgba(54, 54, 54, 0.3);  
+.block4-input:focus{
+    outline: none;    /* Убирает всю рамку */
+    border-bottom: 1px solid rgba(54, 54, 54, 0.3);  /* Снова добавляем подчеркивание */
 }
-.control-input, .control-input-mobile{
+.block4-input-help-text, .block4-input-help-text-mobile{
     display: flex;
     font-size: 13px;
     line-height: 21px;
     color: rgba(54, 54, 54, 0.5);
 }
-.control-input-mobile{
+.block4-input-help-text-mobile{
     display: none;
 }
-.control-submit, .control-submit-mobile{
+/* кнопка подтверждения */
+.block4-submit, .block4-submit-mobile{
     padding: 13px 75px;
     font-size: 13px;
     line-height: 27px;
@@ -405,11 +403,11 @@ header, footer{
     border-radius: 2px;
     cursor: pointer;
 }
-.control-submit-mobile{
+.block4-submit-mobile{
     display: none;
     transform: translateY(50%);
 }
-.control-personal-data{
+.block4-personal-data{
     font-size: 14px;
     line-height: 23px;
     color: #181818;
@@ -421,14 +419,14 @@ label{
     display: inline-block;
     position: relative;
 }
-.checkbox + span {
+.block4-checkbox + span, .block9-checkbox + span{
     position: absolute;
     left: 0; top: 0;
     width: 100%;
     height: 100%;
     cursor: pointer;
 }
-.checkbox:checked + span {
+.block4-checkbox:checked + span, .block9-checkbox:checked + span{
     background: url("Vector/Vector.png") no-repeat;
 }
 
@@ -539,8 +537,10 @@ label{
                                 /* Шестой блок */
 
 .block6{
+    display: flex;
     margin: 124px 0 242.09px;
     height: 725.5px;
+    justify-content: center;
     background: no-repeat url("images/image4.png");
 }
 /* Левая часть */
@@ -1079,7 +1079,7 @@ label{
     .block3-right{
         display: none;
     }
-    .block3-left-pages{
+    .block3-pages{
         display: none;
     }
 }
@@ -1094,11 +1094,11 @@ label{
         float: none;
         padding: 0;
     }
-    .block3-left-text-1, .block3-left-text-2{
+    .text_3-1, .text_3-2{
         text-align: center;
         margin: 0 auto 34px;
     }
-    .block3-slide-mobile-center{
+    .slide-mobile-center{
         display: block;
         text-align: center;
         margin: 42px auto;
@@ -1119,14 +1119,14 @@ label{
         text-align: center;
         float: none;
     }
-    .block3-slide-mobile-left{
+    .slide-mobile-left{
         display: flex;
     }
-    .block3-left-text-1{
+    .text_3-1{
         font-size: 22px;
         line-height: 30px;
     }
-    .block3-left-text-2{
+    .text_3-2{
         width: 331px;
         height: auto;
         margin: auto;
@@ -1148,22 +1148,22 @@ label{
 /*------------------ Блок 4 ------------------*/
 
 @media screen and (max-width: 850px){
-    .online_control{
+    .block4{
         background: #131313;
         padding: 0 18px;
     }
-    .control-title{
+    .block4-title{
         margin-bottom: 19.79px;
         font-size: 22px;
         line-height: 30px;
     }
-    .video{
+    .block4-video{
         margin: 40px auto 28px;
     }
-    .center-line{
+    .block4-line{
         margin: 0 auto;
     }
-    .contol-text{
+    .block4-text{
         width: 340px;
         height: 106px;
         margin-top: 21px;
@@ -1171,48 +1171,48 @@ label{
         line-height: 19px;
         color: #FFFFFF;
     }
-    .control-confirm{
+    .block4-confirm{
         width: 340px;
         height: auto;
         display: block;
         
         margin: 61px auto 26px
     }
-    .control-input{
+    .block4-input-help-text{
         display: none;
         color: rgba(255, 255, 255, 0.5);
     }
-    .control-input-mobile{
+    .block4-input-help-text-mobile{
         display: block;
         text-align: left;
         color: rgba(255, 255, 255, 0.5);
     }
-    .controle-input{
+    .block4-input{
         display: block;
         width: 100%;
         line-height: 19px;
         color: #FFFFFF;
         border-bottom: 1px solid #FFFFFF;
     }
-    .control-input1{
+    .block4-input1{
         margin-bottom: 63px;
     }
-    .control-input::placeholder{
+    .block4-input::placeholder{
         color: #FFFFFF;
     }
-    .control-input:focus {
+    .block4-input:focus {
         border-bottom: 1px solid #FFFFFF;
     }
-    .control-personal-data{
+    .block4-personal-data{
         width: 340px;
         text-align: left;
         margin: 0 auto 35px;
         color: #FFFFFF;
     }
-    .control-submit{
+    .block4-submit{
         display: none;
     }
-    .control-submit-mobile{
+    .block4-submit-mobile{
         display: block;
         width: 340px;
         margin: auto;
@@ -1479,7 +1479,7 @@ label{
     .block3-left{
         margin-right: 50px;
     }
-    .block3-left-text-1, .block3-left-text-2, .block3-left-grid, .block3-left-pages{
+    .text_3-1, .text_3-2, .block3-left-grid, .block3-left-pages{
         text-align: left;
     }
     .block3-left, .block3-right{
